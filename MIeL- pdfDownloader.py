@@ -21,7 +21,8 @@ except ImportError:
 #---------- HEADERS ----------#
 headers  = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0'}
 #-*-*-*-*-* HEADERS *-*-*-*-*-#
-
+print("Vers: 1.1")
+print("Actualizaciones en:\t https://github.com/tatomarinelli/miel_pdf")
 #---------- LOGIN DATA ----------#
 print("Ingrese usuario: ")
 _user = str(input())
@@ -46,7 +47,8 @@ soup = BeautifulSoup(read.content, 'html.parser')
 #-*-*-*-*-* LOGIN REQUEST *-*-*-*-*-#
 
 os.system('cls')
-
+print("Vers: 1.1")
+print("Actualizaciones en:\t https://github.com/tatomarinelli/miel_pdf")
 #######################################################################################
 ## Se podria guardar todo en una clase Materia que incluya nombre y link de comision ##
 #######################################################################################
@@ -86,6 +88,8 @@ try:
             break
         
     os.system('cls')
+    print("Vers: 1.1")
+    print("Proximas actualizaciones en: https://github.com/tatomarinelli/miel_pdf \n\n")    
     print("Ha seleccionado: ", materias[menu - 1], "\n")
 #-*-*-*-*-* VALIDACION *-*-*-*-*-#
 
@@ -127,7 +131,3 @@ try:
 #---------- Exceptions ----------#
 except KeyboardInterrupt:
     print("\n[Descarga interrumpida, saliendo...]")
-    
-
-
-    
