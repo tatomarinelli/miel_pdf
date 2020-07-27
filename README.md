@@ -1,4 +1,4 @@
-# MIeL PDF V1.1 - Franco Marinelli
+# MIeL PDF V1.2 - Franco Marinelli
 Descarga todos los pdf's de la comisión deseada.
 
 Si nunca entraste en GitHub, sólo descargá el archivo que diga "MIeL - PDF Downloader - Buildx-x.7z" , descomprimilo y ejecutalo! (Puede demorar un poco en ejectuar).
