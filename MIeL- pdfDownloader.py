@@ -19,7 +19,7 @@ except ImportError:
 
 def headerInfo():
  print("##################################################################")
- print("Vers: 1.1")
+ print("Vers: 1.2")
  print("Actualizaciones en:\t https://github.com/tatomarinelli/miel_pdf")
  print("##################################################################\n\n")
     
