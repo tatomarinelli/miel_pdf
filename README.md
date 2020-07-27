@@ -1,11 +1,13 @@
-# miel_pdf
+# MIeL PDF V1.1
 Descarga todos los pdf's de la comisión deseada.
 
-Las descargas se encuentran en el path del .exe dentro de la carpeta "Materias" subdivididos según corresponda.
+Si nunca entraste en GitHub, sólo buscá el archivo que diga "MIeL - PDF Downloader - Buildx-x.7z" , descomprimilo y ejecutalo! (Puede demorar un poco en ejectuar)
+Las descargas se encuentran en la ruta donde se ejecuta el archivo, dentro de la carpeta "Materias" subdivididos según corresponda.
 
+• IMPORTANTE:
 No verifica datos del login, si los mismos son incorrectos el programa sigue sin datos de comisiones disponibles.
 La contraseña no se oculta.
 Si se desea descargar mas de una comisión se debe correr el programa nuevamente.
 
-Mejora importante: Dividir los pdf's según unidades.
+PD: Es la segunda vez que uso Python, sin dudas el código puede mejorar y emprolijarse. La idea fue sacar algo rápido tratando de hacerlo lo mejor posible.
 
