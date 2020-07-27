@@ -16,39 +16,56 @@ try:
 except ImportError:
     print ("Por favor, primero descargue BeautifulSoup (pip install bs4).")
     sys.exit(0)
- 
+
+def headerInfo():
+ print("##################################################################")
+ print("Vers: 1.1")
+ print("Actualizaciones en:\t https://github.com/tatomarinelli/miel_pdf")
+ print("##################################################################\n\n")
     
 #---------- HEADERS ----------#
 headers  = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0'}
 #-*-*-*-*-* HEADERS *-*-*-*-*-#
-print("Vers: 1.1")
-print("Actualizaciones en:\t https://github.com/tatomarinelli/miel_pdf")
-#---------- LOGIN DATA ----------#
-print("Ingrese usuario: ")
-_user = str(input())
-print("Ingrese contraseña: ")
-_pass = str(input())
-login_data = {'usuario' : _user , 'clave' : _pass}
-#-*-*-*-*-* LOGIN DATA *-*-*-*-*-#
 
-# #---------- PATH DESCARGA ----------#
-# download_path = (os.getcwd()+"\\Materias\\")
-# if not os.path.exists(download_path):
-#     os.makedirs(download_path)
-# #-*-*-*-*-* PATH DESCARGA *-*-*-*-*-#
+headerInfo()
+
+#---------- LOGIN FUNCTION ----------#
+def loginForm():
+    print("Ingrese usuario: ")
+    _user = str(input())
+    print("\nIngrese contraseña: ")
+    _pass = str(input())
+    _data = {'usuario' : _user , 'clave' : _pass}
+    return _data
+#-*-*-*-*-* LOGIN FUNCTION *-*-*-*-*-#
 
 #---------- LOGIN REQUEST ----------#
-print("Conectando...")
-s = requests.Session()
-url = 'https://miel.unlam.edu.ar/principal/event/login/'
-read = s.get(url, headers=headers)
-read = s.post(url, headers = headers, data = login_data)
-soup = BeautifulSoup(read.content, 'html.parser')
+class _errorLogin(Exception) : pass 
+while True:
+    try:
+        login_data = loginForm()
+        print("\nConectando...")
+        s = requests.Session()
+        url = 'https://miel.unlam.edu.ar/principal/event/login/'
+        read = s.get(url, headers=headers)
+        read = s.post(url, headers = headers, data = login_data)
+        soup = BeautifulSoup(read.content, 'html.parser')
+    
+        loginState = soup.find("a", attrs = {'href': "https://miel.unlam.edu.ar/data2/ayuda/recuperar_clave_intraconsulta.pdf"})
+        if loginState != None:
+            print("Usuario o Contrasena incorrectos\n")
+            raise _errorLogin()
+            
+    except _errorLogin:
+        continue
+    else:
+        os.system('cls')
+        break
+    
 #-*-*-*-*-* LOGIN REQUEST *-*-*-*-*-#
 
-os.system('cls')
-print("Vers: 1.1")
-print("Actualizaciones en:\t https://github.com/tatomarinelli/miel_pdf")
+headerInfo()
+
 #######################################################################################
 ## Se podria guardar todo en una clase Materia que incluya nombre y link de comision ##
 #######################################################################################
@@ -88,8 +105,8 @@ try:
             break
         
     os.system('cls')
-    print("Vers: 1.1")
-    print("Proximas actualizaciones en: https://github.com/tatomarinelli/miel_pdf \n\n")    
+    headerInfo()
+    
     print("Ha seleccionado: ", materias[menu - 1], "\n")
 #-*-*-*-*-* VALIDACION *-*-*-*-*-#
 
@@ -131,3 +148,7 @@ try:
 #---------- Exceptions ----------#
 except KeyboardInterrupt:
     print("\n[Descarga interrumpida, saliendo...]")
+    
+
+
+    
