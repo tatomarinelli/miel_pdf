@@ -25,7 +25,7 @@ def descargaEnCarpetas(soup, session, download_path):
                 cant+=1 #Cantidad de descargas
 
                 # Tenemos que crear el path correspondiente a la carpeta #
-                final_path = download_path + str(moduloArray) + "--" + moduloPath + "\\"
+                final_path = download_path + str(moduloArray) + "--" + moduloPath.replace(" ", "-") + "\\"
                 if not os.path.exists(final_path):
                     os.makedirs(final_path)
 
