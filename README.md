@@ -1,13 +1,12 @@
 # MIeL PDF V1.4 - Franco Marinelli
 Descarga todos los pdf's de la comisión deseada.
 
+Si nunca entraste en GitHub, busca a tu derecha el apartado de "Releases" y descargá el archivo que diga "Herramienta MIeL PDF - V1.4.exe" y ejecutalo! (Puede demorar un poco en ejectuar).
+
 UPDATE V1.4 - Se agrega:
 • Opción de descargar en las carpetas correspondientes.
 • Chequeo de nuevas versiones.
 • Código mejor distribuido.
-
-
-Si nunca entraste en GitHub, sólo descargá el archivo que diga "MIeL - PDF Downloader - Buildx-x.7z" , descomprimilo y ejecutalo! (Puede demorar un poco en ejectuar).
 
 Las descargas se encuentran en la ruta donde se ejecuta el archivo, dentro de la carpeta "Materias" subdivididos según corresponda.
 
