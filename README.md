@@ -2,7 +2,8 @@
 Descarga todos los pdf's de la comisión deseada.
 
 Si nunca entraste en GitHub, busca a tu derecha el apartado de "Releases" y descargá el archivo que diga "Herramienta MIeL PDF - Vx.x.exe" y ejecutalo!
-IMPORTANTE: Ejecutar como administrador (Boton derecho -> Ejecutar como administrador), el primer inicio suele tardar en ejecutar.
+IMPORTANTE: 1. Ejecutar como administrador (Boton derecho -> Ejecutar como administrador), el primer inicio suele tardar en ejecutar.
+            2. El antivirus puede detectar el archivo .exe como virus, excluirlo.
 
 Las descargas se encuentran en la ruta donde se ejecuta el archivo, dentro de la carpeta "Materias" subdivididos según corresponda.
 
