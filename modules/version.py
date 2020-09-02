@@ -11,7 +11,7 @@ headers  = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Ge
 
 currentVersion = "1.3"
 
-def getCurrent()
+def getCurrent():
     return currentVersion
 
 def writeVersion(current):
