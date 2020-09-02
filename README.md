@@ -1,8 +1,6 @@
 # MIeL PDF V1.5 - Franco Marinelli
 Descarga todos los pdf's de la comisión deseada.
 
-ACTUALIZAR A V1.5.
-
 Si nunca entraste en GitHub, busca a tu derecha el apartado de "Releases" y descargá el archivo que diga "Herramienta MIeL PDF - Vx.x.exe" y ejecutalo!
 IMPORTANTE: Ejecutar como administrador (Boton derecho -> Ejecutar como administrador), el primer inicio suele tardar en ejecutar.
 
