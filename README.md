@@ -8,9 +8,10 @@ Las descargas se encuentran en la ruta donde se ejecuta el archivo, dentro de la
 
 Si se desea descargar mas de una comisión se debe correr el programa nuevamente.
 
-UPDATE V1.4 - Se agrega:
+UPDATE V1.5 - Se agrega:
 • Opción de descargar en las carpetas correspondientes.
 • Chequeo de nuevas versiones.
 • Código mejor distribuido.
+• Fix Path's Windows
 
 PD: Es la segunda vez que uso Python, sin dudas el código se puede mejorar y emprolijar. La idea fue sacar algo rápido tratando de hacerlo lo mejor posible.
