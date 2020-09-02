@@ -1,6 +1,7 @@
 
-## Este modulo se encarga de todas las funciones de descarga ##
 import os
+
+## Este modulo se encarga de todas las funciones de descarga ##
 #---------- DESCARGA FUNCTION ----------#
 def descargaEnCarpetas(soup, session, download_path):
     moduloArray = 0 #Posicion del array para las carpetas
