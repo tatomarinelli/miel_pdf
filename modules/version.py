@@ -19,7 +19,7 @@ except ImportError:
 headers  = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0'}
 #-*-*-*-*-* HEADERS *-*-*-*-*-#
 
-currentVersion = "1.5"
+currentVersion = "1.6"
 
 def getCurrent():
     writeVersion(currentVersion)
@@ -43,6 +43,8 @@ def checkUpdate():
     if (updatedVersion == currentVersion):
         print("\nPosee la ultima version! - ", currentVersion, "\n")
     else: 
-        print("\nHay una nueva actualizacion, version actual: ", currentVersion, "Nueva version: ", soup, "\n")
+        print("\nHay una nueva actualizacion, version actual: v", currentVersion, "Nueva version: v", soup, "\n")
+        print("Dirigase a: https://github.com/tatomarinelli/miel_pdf/releases para obtener la ultima version\n\n")
+        os.system("pause")
 
 
