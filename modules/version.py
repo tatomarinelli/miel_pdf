@@ -1,5 +1,6 @@
 import os
 import sys
+import webbrowser
 
 try:
     import requests
@@ -38,13 +39,15 @@ def checkUpdate():
     url = 'https://raw.githubusercontent.com/tatomarinelli/miel_pdf/master/modules/vers.txt'
     read = session.get(url, headers=headers)
     soup = BeautifulSoup(read.content, 'html.parser')
-    updatedVersion = str(soup).strip("\n")
+    updatedVersion = str(soup).split("\n")[0] #Nos quedamos solo con el numero de version.
+    
 
     if (updatedVersion == currentVersion):
         print("\nPosee la ultima version! - ", currentVersion, "\n")
     else: 
-        print("\nHay una nueva actualizacion, version actual: v", currentVersion, "Nueva version: v", soup, "\n")
+        print("\nHay una nueva actualizacion, version actual:v",currentVersion, "Nueva version:v",soup, "\n")
         print("Dirigase a: https://github.com/tatomarinelli/miel_pdf/releases para obtener la ultima version\n\n")
         os.system("pause")
+        webbrowser.open("https://github.com/tatomarinelli/miel_pdf/releases")
 
 

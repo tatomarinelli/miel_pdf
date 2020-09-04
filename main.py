@@ -34,7 +34,7 @@ version.checkUpdate()
 def headerInfo():
  print("##################################################################")
  print("Vers: ", currentVersion)
- print("Actualizaciones en:\t https://github.com/tatomarinelli/miel_pdf")
+ print("Actualizaciones en:\t ")
  print("##################################################################\n\n")
     
 headerInfo()
