@@ -9,7 +9,6 @@ Las descargas se encuentran en la ruta donde se ejecuta el archivo, dentro de la
 Si se desea descargar mas de una comisión se debe correr el programa nuevamente.
 
 V1.6:
-
 • Ya no se detecta como virus (Falso positivo)
 • Verifica actualizaciones y pone una pausa advirtiendo los nuevos cambios.
 • Se compila para 32bits y 64bits (Aunque es lo mismo porque las anteriores eran de 32bits ¯\_(ツ)_/¯).
