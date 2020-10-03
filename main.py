@@ -25,6 +25,13 @@ except ImportError:
     os.system("pause")
     sys.exit(0)
 
+#try: 
+#    from pick import pick
+#except ImportError:
+#    print ("Por favor, primero descargue pick https://github.com/wong2/pick.")
+#    os.system("pause")
+#    sys.exit(0)
+
 
 # UPDATES #
 currentVersion = version.getCurrent()
@@ -34,7 +41,7 @@ version.checkUpdate()
 def headerInfo():
  print("##################################################################")
  print("Vers: ", currentVersion)
- print("Actualizaciones en:\t ")
+ print("Actualizaciones en:\t https://github.com/tatomarinelli/miel_pdf")
  print("##################################################################\n\n")
     
 headerInfo()
@@ -129,7 +136,7 @@ try:
 
 #---------- SELECCION CARPETAS ----------#
     seleccionMaterias = 0
-    print("Desea guardar los PDF's en las carpetas especificas?\n")
+    print("Desea guardar los documentos por carpetas?\n")
     print("1 -- Si\n")
     print("2 -- No\n")
     while True:
@@ -147,10 +154,10 @@ try:
 
     if (seleccionMaterias == 1):
         enCarpetas = True
-        print("Los PDF's se descargan en carpetas")
+        print("Los documentos se descargaran por carpetas")
     else:
         enCarpetas = False
-        print ("Los PDF's se descargan todos juntos")
+        print ("Los documentos se descargaran todos juntos")
 
     os.system("pause")
     os.system("cls")
