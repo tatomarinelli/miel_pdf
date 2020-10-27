@@ -5,6 +5,8 @@ try:
     from modules.download_function import descargaEnCarpetas
     from modules.download_function import descargaSinCarpetas
     from modules.login_function import loginForm
+    from modules.header import headerInfo
+    from modules.url_function import AskForUrl
     from modules import version
 except ImportError:
     print("Error al importar modulos de funciones")
@@ -38,18 +40,15 @@ currentVersion = version.getCurrent()
 version.checkUpdate()
 ######################################
 
-def headerInfo():
- print("##################################################################")
- print("Vers: ", currentVersion)
- print("Actualizaciones en:\t https://github.com/tatomarinelli/miel_pdf")
- print("##################################################################\n\n")
-    
 headerInfo()
-
 
 #---------- HEADERS ----------#
 headers  = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0'}
 #-*-*-*-*-* HEADERS *-*-*-*-*-#
+
+#---------- URL ----------#
+url_fija = AskForUrl()
+#-*-*-*-*-* URL *-*-*-*-*-#
 
 #---------- LOGIN REQUEST ----------#
 class _errorLogin(Exception) : pass 
@@ -58,12 +57,12 @@ while True:
         login_data = loginForm()
         print("\nConectando...")
         session = requests.Session()
-        url = 'https://miel.unlam.edu.ar/principal/event/login/'
+        url = url_fija + 'principal/event/login/'
         read = session.get(url, headers=headers)
         read = session.post(url, headers = headers, data = login_data)
         soup = BeautifulSoup(read.content, 'html.parser')
     
-        loginState = soup.find("a", attrs = {'href': "https://miel.unlam.edu.ar/data2/ayuda/recuperar_clave_intraconsulta.pdf"})
+        loginState = soup.find("a", attrs = {'href': url_fija + "data2/ayuda/recuperar_clave_intraconsulta.pdf"})
         if loginState != None:
             print("Usuario o Contrasena incorrectos\n")
             raise _errorLogin()
@@ -83,8 +82,7 @@ headerInfo()
 #######################################################################################
 #---------- MOSTRAMOS Y GUARDAMOS MATERIAS DISPONIBLES ----------#
 try:    
-    
-    url = 'https://miel.unlam.edu.ar/principal/interno/'
+    url = url_fija + "principal/interno/"
     read = session.get(url)
     soup = BeautifulSoup(read.content, 'html.parser')
     
@@ -98,7 +96,7 @@ try:
     
     linkMaterias = []
     for comisiones in soup.findAll("a", href = True):
-        if comisiones['href'].find('https://miel.unlam.edu.ar/contenido/archivos/comision/') == 0:
+        if comisiones['href'].find(url_fija + 'contenido/archivos/comision/') == 0:
             linkMaterias.append(comisiones['href'])
 #-*-*-*-*-* MOSTRAMOS Y GUARDAMOS MATERIAS DISPONIBLES *-*-*-*-*-#
 
