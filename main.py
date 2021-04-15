@@ -48,6 +48,7 @@ headers  = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Ge
 
 #---------- URL ----------#
 url_fija = AskForUrl()
+url_isLoggedMiel = "https://miel.unlam.edu.ar/principal/event/isLogged/"
 #-*-*-*-*-* URL *-*-*-*-*-#
 
 #---------- LOGIN REQUEST ----------#
@@ -61,11 +62,17 @@ while True:
         read = session.get(url, headers=headers)
         read = session.post(url, headers = headers, data = login_data)
         soup = BeautifulSoup(read.content, 'html.parser')
-    
+
+## VALIDA MIEL HISTORICO
         loginState = soup.find("a", attrs = {'href': url_fija + "data2/ayuda/recuperar_clave_intraconsulta.pdf"})
         if loginState != None:
-            print("Usuario o Contrasena incorrectos\n")
+            print("MIeL Historico: Usuario o Contrasena incorrectos\n")
             raise _errorLogin()
+## VALIDA MIEL
+        if (session.get(url_isLoggedMiel).text == '0'):
+            print("MIeL: Usuario o Contrasena incorrectos\n")
+            raise _errorLogin()
+## Se podría pasar todo a funciones dedicadas por login.
             
     except _errorLogin:
         continue

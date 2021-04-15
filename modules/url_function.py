@@ -7,7 +7,7 @@ except ImportError:
 def AskForUrl():
     url_mielhistorico = 'https://mielhistorico.unlam.edu.ar/'
     url_miel = 'https://miel.unlam.edu.ar/'
-    
+
     print("\n Seleccione el sitio de MIeL a ingresar: \n")
     print("1 -- MIeL\n")
     print("2 -- MIeL Historico\n\n")

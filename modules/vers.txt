@@ -1,4 +1,7 @@
-1.8
+1.9
 
+• Actualización MIeL primer cuatrimestre 2021, validaciones para la nueva web.
+
+Anterior - V1.8:
 • Se agrega la opcion de descargar desde MIeL Historico.
 • Importante de la version anterior: -- Se agregan las siguientes extensiones para la descarga: ".pdf, .doc, .docx, .xls, .xlsx, .ppt, .pptx, .txt, .jpg, .jpeg, .png, .nb".
